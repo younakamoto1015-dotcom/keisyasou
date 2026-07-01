@@ -699,8 +699,8 @@
             let displayStr = "";
             if (angle === 0 || angle === 180) displayStr = "NS (南北)";
             else if (angle === 90) displayStr = "EW (東西)";
-            else if (angle < 90) displayStr = `N${angle}°E`;
-            else displayStr = `N${180 - angle}°W`;
+            else if (angle < 90) displayStr = `N${angle}°W`;
+            else displayStr = `N${180 - angle}°E`;
             angleLabel.innerText = displayStr;
         }
 
