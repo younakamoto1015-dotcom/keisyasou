@@ -446,7 +446,7 @@
                     const target = new THREE.Vector3();
                     if (mathPlane.intersectLine(line, target)) {
                         // 重複する点（近すぎる点や、線の手前・奥などで複数判定される点）を排除するために距離の閾値を広くする
-                        const isDuplicate = foundPoints.some(p => p.distanceTo(target) < maxDimGlobal * 0.08);
+                        const isDuplicate = foundPoints.some(p => p.distanceTo(target) < maxDimGlobal * 0.05);
                         if (!isDuplicate) {
                             foundPoints.push(target.clone());
                             const sphere = new THREE.Mesh(
